@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    user-scalable=no,initial-scale=1,
+    maximum-scale=1,minimum-scale=1,
+    viewport-fit=cover">
+    <title>简历</title>
+</head>
+<body>
+    <style id="style"></style>
+    <div id="demo"></div>
+    <div id="div1wrapper">
+    <div id="div1"></div></div>
+    <style>
+        #demo{
+            word-break: break-all;
+        }
+        #div1{
+            position:fixed;
+            left: 50%; 
+            transform: translateX(-50%);
+            top:20px;
+        }
+        #div1::before{
+        content:'';
+        display:block;
+        position: absolute;
+        }
+        #div1::after{
+        content:'';
+        display:block;
+        position: absolute;
+        }
+        @media(max-width:500px){    /*手机端*/
+            #demo{
+                height: 50vh;
+                overflow: hidden;  /*隐藏下面半个界面的代码*/
+            }
+            #div1wrapper{
+                height: 50vh;
+            }
+            #div1{
+                position: relative;  /*消除默认定位*/
+                top:0;
+                right: 0;
+            }
+        }
+        </style>
+    <script src="/main.7f15c643.js"></script>
+</body>
+</html>
